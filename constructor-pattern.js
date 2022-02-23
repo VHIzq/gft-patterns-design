@@ -5,29 +5,26 @@
 
 class Trainee{
   constructor(name, lastname, age, email){
-    this.name = name ||null;
-    this.lastname = lastname || null;
-    this.age = age || 0;
-    this.email = email || null;
+    this._name = name ||null;
+    this._lastname = lastname || null;
+    this._age = age || 0;
+    this._email = email || null;
   }
   
   setName(name){
-    this.name = name;
     /* el return sirve para retornar valores y dar pie al siguiente método
     concatenarlo
     */
-    return this;
+    return this._name = name;
   }
   setLastName(lastname){
-    this.lastname = lastname;
-    return this;
+    this._lastname = lastname;
   }
   setAge(age){
-    this.age = age;
-    return this;
+    this._age = age;
   }
   setEmail(email){
-    this.email = email;
+    this._email = email;
   }
 
   setTrainee(name, lastname, age = 20, email){
@@ -58,3 +55,4 @@ const Gera = new Persona()
   frida.lastname = "Rodriguez"
 
 console.log(frida.me());
+

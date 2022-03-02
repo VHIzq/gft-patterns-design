@@ -43,4 +43,4 @@ const Yuhiko = new Suscriptor("Yuhiko");
 observador.suscribir(Yuhiko);
 
 console.log("Suscribir:", observador.suscriptores);
-observador.notificar("FIesta Gragaduación")
+observador.notificar("FIesta Gragaduación");

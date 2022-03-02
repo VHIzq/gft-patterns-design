@@ -51,8 +51,8 @@ class Subscriber implements Observer{
 };
 
 let channel = new YoutubeChannel();
-let s1 = new Subscriber(channel);
-let s2 = new Subscriber(channel);
+let s1 = new Subscriber();
+let s2 = new Subscriber();
 
 channel.attach(s1);
 channel.attach(s2);

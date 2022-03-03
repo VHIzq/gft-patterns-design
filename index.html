@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,33 +11,37 @@
 <body>
   <h1>We Talk</h1>
   <section class="container">
-    <form action="">
+    <form id="form" name="formCheck" action="">
       <!-- user -->
       <div class="user__wrapper">
-        <input type="checkbox" name="user" id="">
+        <input class="checkbox" type="checkbox" name="user" value="us1" id="">
         <img src="imgs/hombre.png" alt="">
+        <img id="chat-icon" class="chat" src="imgs/chat.png" alt="">
       </div>
       <!-- user -->
       <div class="user__wrapper">
-        <input type="checkbox" name="user" id="">
+        <input class="checkbox" type="checkbox" name="user" value="us2" id="">
         <img src="imgs/nina.png" alt="">
+        <img class="chat" src="imgs/chat.png" alt="">
       </div>
       <!-- user -->
       <div class="user__wrapper">
-        <input type="checkbox" name="user" id="">
+        <input class="checkbox" type="checkbox" name="user" value="us3" id="">
         <img src="imgs/nino.png" alt="">
+        <img class="chat" src="imgs/chat.png" alt="">
       </div>
       <!-- user -->
       <div class="user__wrapper">
-        <input type="checkbox" name="user" id="">
+        <input class="checkbox" type="checkbox" name="user" value="us4" id="">
         <img src="imgs/nina-2.png" alt="">
+        <img class="chat" src="imgs/chat.png" alt="">
       </div>
-      <textarea name="" id="" cols="30" rows="10"></textarea>
-      <button type="button">
+      <textarea name="" id="" cols="30" rows="5"></textarea>
+      <button type="submit">
        <img src="imgs/send.png" alt="">
       </button>
     </form>
   </section>
-  <script src="my-observer-pattern.js"></script>
+  <script src="01-exercise-chat.js"></script>
 </body>
 </html>

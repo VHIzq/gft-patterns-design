@@ -34,6 +34,11 @@ img{
   width: 80px;
   margin-left: 10px;
 }
+img.chat{
+  width: 25px;
+  height: 25px;
+  visibility: hidden;
+}
 textarea{
   display: block;
   margin: 15px 0;
@@ -41,6 +46,8 @@ textarea{
   border: none;
   outline: none;
   font-size: 17px;
+  padding: 5px 5px;
+
 }
 
 button{
@@ -51,5 +58,6 @@ button{
 }
 
 button img{
-  width: 35px;
+  width: 45px;
 }
+

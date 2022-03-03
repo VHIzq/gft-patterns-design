@@ -5,38 +5,39 @@ const $chat2 = id("chat2");
 const $chat3 = id("chat3");
 const $chat4 = id("chat4");
 const $form = id("form");
+const $cta = id("cta");
 const $message = id("message");
 
 let $Observers = document.querySelectorAll('input[type=checkbox]');
 
 /* add observers */
-function suscribeObservers() {
-  const observers = []
-
+function subscribe() {
+  let observers = [];
+  let count = 1;
   $Observers.forEach(obs => {
     obs.addEventListener("change", (evt) => {
-      evt.target.checked ? addObserver() : null;
+      console.log(`Participants added: ${count++}`);
+      evt.target.checked ? observers.push(obs): null;
     });
-
-    function addObserver() {
-      observers.push(obs);
-      console.log("Observer added");
-    }
   });
   console.log(observers);
 };
 
-suscribeObservers();
+subscribe();
 
-$form.addEventListener("submit", (e) => {
-  e.preventDefault();
-
-class Subject{
-
-  constructor(){
-    this.observers = [];
-  }
-
+  class Subject{
+    constructor(){
+      this.observers = [];
+    }
+    
+    /* suscribe() {
+    $Observers.forEach(obs => {
+      obs.addEventListener("change", (evt) => {
+        evt.target.checked ? this.observers.push(obs)  : null;
+      });
+    });
+    console.log("subscribe clicked");
+  }; */
   subscribe(o){
     this.observers.push(o);
   }
@@ -86,8 +87,6 @@ class ChatObserver4{
   }
 };
 
-
-
 let messageSubject = new MessageSubject();
 
 let chatObserver1 = new ChatObserver1();
@@ -103,5 +102,3 @@ messageSubject.subscribe(chatObserver4);
 $message.addEventListener("input", evt => {
   messageSubject.notify(evt.target.value);
 })
-
-});

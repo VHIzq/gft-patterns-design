@@ -5,7 +5,7 @@
 }
 
 body{
-  background-color: #075e54;
+  background-color: #128c7e;
   min-height: 100vh;
 }
 
@@ -51,7 +51,7 @@ textarea{
 }
 
 button{
-  background-color: #075e54;
+  background-color: #128c7e;
   border: none;
   outline: none;
   cursor: pointer;

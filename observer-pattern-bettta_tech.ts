@@ -17,7 +17,7 @@ class YoutubeChannel implements Observable{
   }
 
   detach(o: Observer) {
-      return this.channelSubscribers = this.channelSubscribers.filter(s => s !== o);
+      this.channelSubscribers = this.channelSubscribers.filter(s => s !== o);
   }
 
   addNewVideo(title: string){
@@ -27,7 +27,7 @@ class YoutubeChannel implements Observable{
   }
 
   lastVideoTitle(){
-    this.lastVideoPosted;
+    return this.lastVideoPosted;
   }
 
   notify() {
@@ -40,7 +40,7 @@ class YoutubeChannel implements Observable{
 class Subscriber implements Observer{ 
   private observable = null;
 
-  constructor( observable: YoutubeChannel){
+  constructor(observable: YoutubeChannel){
     this.observable = observable;
   }
   
@@ -51,8 +51,8 @@ class Subscriber implements Observer{
 };
 
 let channel = new YoutubeChannel();
-let s1 = new Subscriber();
-let s2 = new Subscriber();
+let s1 = new Subscriber(channel);
+let s2 = new Subscriber(channel);
 
 channel.attach(s1);
 channel.attach(s2);
